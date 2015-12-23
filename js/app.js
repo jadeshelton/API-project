@@ -8,35 +8,22 @@ $(function(){
 		});
 });
 
+
+
 function getRequest(searchTerm){
-	/*	var params = {
-			api_key : "5afdc9b4e5bc62e549e77349e86e49c88dc07605", 
-			query: "crash bandicoot", 
-			field_list : "name, platforms", 
-			format : "jsonp"
-		};
-		url = 'http://api.giantbomb.com/search/',
-		$.getJSON(url, params, function(data) {
-			showResults(data.results);
-	});*/
         $.ajax({
           url: "http://api.giantbomb.com/search/",
           type: "GET",
-          data: {api_key : "5afdc9b4e5bc62e549e77349e86e49c88dc07605", query: "crash bandicoot", field_list : "name, image, platforms", format : "jsonp", json_callback : "gamer" },
+          data: {api_key : "5afdc9b4e5bc62e549e77349e86e49c88dc07605", query: searchTerm, field_list : "name, image, platforms", format : "jsonp", json_callback : "gamer" },
           dataType: "JSONP"
         });
 }
 
-/*
-function showResults(results){
-	$.each(results, function(index, item){
-		console.log(item);
-	});
-}
-*/
 function gamer(data) {
-	$.each(data.results, function(index, value) {
-    $('body').append('Found ' + value + ' results for ' + query);
+	var searchTerm = $("#query").val();
+	$('body').append('<h1>There are ' + data.number_of_total_results + ' results for ' + searchTerm + '</h1>')
+	$.each(data.results, function(index, data) {
+    $('body').append('<p>' + data.name + ' ' + data.resource_type + '</p>');
 });
 
     // var games = data.game;
