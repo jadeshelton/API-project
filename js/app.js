@@ -15,7 +15,7 @@ function getRequest(searchTerm){
         $.ajax({
           url: "http://api.giantbomb.com/search/",
           type: "GET",
-          data: {limit: 10, resource_type: "genre, game", api_key : "5afdc9b4e5bc62e549e77349e86e49c88dc07605", query: searchTerm, field_list : ["genres", "name", "platforms", "description"],  format : "jsonp", json_callback : "gamer" },
+          data: {limit: 5, resource_type: ["genre, game"], api_key : "5afdc9b4e5bc62e549e77349e86e49c88dc07605", query: searchTerm, field_list : ["genres", "game.name", "platforms.name", "description"],  format : "jsonp", json_callback : "gamer" },
           dataType: "JSONP"
           
         });
