@@ -1,5 +1,6 @@
 html, body {	
 	height: 100%;
+	background-color: #236467;
 }
 
 #wrapper {
@@ -13,6 +14,12 @@ html, body {
 	margin: auto;
 	padding-bottom: 1em 0;
 	overflow: hidden;
+	
+}
+
+#query {
+	background-color : #99FFCC;
+	border: 3px solid black;
 	
 }
 
@@ -92,6 +99,7 @@ h3 {
 	margin: 0;
 	padding-top: 1em;
 	padding-left: .5em;	
+
 }
 
 img {
@@ -118,6 +126,7 @@ h2 {
 h4 {
 	margin: 0;
 	font-size: 2em;
+	text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white;
 	font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
 }
 
@@ -127,7 +136,7 @@ nav {
 
 #vg-name-and-desc {
 /*	border: .2em solid orange;*/
-	width: 49%;
+	width: 50%;
 	float: left;
 	overflow: hidden;
 	height: 16em;
@@ -137,6 +146,7 @@ nav {
 	border-bottom: .1em solid orange;
 	height: 4em;
 	line-height: 4em;
+	background-color: #801515;
 }
 
 .img-desc {
@@ -150,15 +160,16 @@ nav {
 }
 
 #game-desc {
-	width: 49%;
+	width: 50.8%;
 	float: left;
 	/*border: .2em solid red;*/
+	background-color: #D7B56E;
 	height: 100%;
 }
 
 #vg-rank-and-info {
 	border-left: .1em solid red;
-	width: 49%;
+	width: 49.8%;
 	float: left;
 }
 
@@ -178,9 +189,9 @@ nav {
 }
 
 #game-platforms {
-	background-color: #FFAAAA;
+	background-color: #88CC88;
 }
 
 #game-link {
-	background-color: #FFD1AA;
+	background-color: #669999;
 }
