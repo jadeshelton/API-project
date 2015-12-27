@@ -126,7 +126,7 @@ h2 {
 
 h4 {
 	margin: 0;
-	font-size: 2em;
+	font-size: 1.1em;
 	text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white;
 	font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
 }
@@ -148,6 +148,9 @@ nav {
 	height: 4em;
 	line-height: 4em;
 	background-color: #801515;
+    text-overflow: ellipsis;
+ 	white-space: nowrap;
+ 	overflow: hidden;
 }
 
 .img-desc {
@@ -195,4 +198,8 @@ nav {
 
 #game-link {
 	background-color: #669999;
+}
+
+#game-desc > h2 {
+	display: none;
 }
