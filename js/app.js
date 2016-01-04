@@ -1,11 +1,11 @@
 
-
 $(document).ready(function () {
 
 /*once user submits query, run this function*/
 	$("#search-term").submit(function(event) {
+		var searchTerm = $("#query").val();
 		event.preventDefault();
-		$('nav').html('<h2 class="results-title">Results Generating</h2>');
+		$('nav').html('<h2 class="results-title">Results Generating for ' + searchTerm + '</h2>');
 		$('ul').html('');
 		var searchTerm = $("#query").val();
 		getRequest(searchTerm);
